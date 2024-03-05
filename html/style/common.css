@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p,
+ul,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+hr {
+    display: none;
+}
+
+.hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* 공통속성 */
+@font-face {
+    font-family: 'segoe';
+    src: local(※),
+        url(../webfont/segoeui.ttf) format('truetype'),
+        url(../webfont/segoeui.eot?#iefix) format('embedded-opentype'),
+        url(../webfont/segoeui.woff) format('woff');
+}
+
+body {
+    min-width: 1200px;
+    font-family: 'segoe';
+}
+
+/* 헤더 */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#header h1 {
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    width: 249px;
+}
+
+#header h1 a {
+    display: block;
+    height: 50px;
+    background: url(../img/logo.png) no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 멤버십 */
+#membership {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+
+#membership ul {
+    display: flex;
+}
+
+#membership li.goLogin {
+    position: relative;
+    padding-right: 9px;
+}
+
+#membership li.goLogin::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 1px;
+    height: 11px;
+    background: #333;
+}
+
+#membership li.goJoin {
+    padding-left: 9px;
+}
+
+#membership li a {
+    color: #333;
+    font-size: 14px;
+}
+
+/* gnb */
+#gnb ul {
+    display: flex;
+}
+
+#gnb ul li {
+    margin: 0 5px;
+}
+
+#gnb ul li a {
+    padding: 0 10px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+#gnb ul li a:hover {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #18aaff;
+}
+
+/* 본문시작 */
+/* 슬로건 */
+#slogan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    text-align: center;
+    background: url(../img/marrakech-4500910_1920.jpg) no-repeat center / cover;
+}
+
+#slogan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #000;
+}
+
+#slogan p {
+    position: relative;
+    margin-bottom: 50px;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 0 5px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#slogan a {
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 0 20px;
+    color: #fff;
+    transition: 1s;
+}
+
+#slogan a:hover {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+/* 웹솔루션 */
+#solutionWrap {
+    background: #ebebeb;
+}
+
+#solution {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#solution .solution {
+    width: 100%;
+    padding: 150px 20px 30px;
+    background: url(../img/bg_solution.png) no-repeat;
+}
+
+#solution .solution a {
+    color: #000;
+}
+
+#solution .solution a p {
+    color: #777777;
+}
+
+#solution .hosting {
+    background-position-y: 50px;
+}
+
+#solution .security {
+    background-position: center 50px
+}
+
+#solution .payment {
+    background-position: right 40px;
+}
+
+/* customerBoard */
+
+#customerBoard {
+    display: flex;
+    width: 1200px;
+    margin: 60px auto;
+    justify-content: space-evenly;
+
+}
+
+#customerBoard>section {
+    width: 45%;
+    position: relative;
+}
+
+#customerBoard h3 {
+    /* text-transform: uppercase; */
+    font-size: 1.75em;
+    font-weight: normal;
+    padding: 0 0 20px 10px;
+    border-bottom: 1px solid #000;
+}
+
+#customerBoard .more {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#customerBoard .more::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+#customerBoard .more::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+
+#customerBoard .more:hover {
+    transform: rotate(45deg);
+}
+
+#securityNews h3 span {
+    color: rgb(247, 78, 11);
+}
+
+#securityNews dl {
+    padding: 15px 20px;
+}
+
+#securityNews dl dt {
+    margin-bottom: 15px;
+    color: #000;
+}
+
+#securityNews dd {
+    color: #757575;
+}
+
+#newsNotice li {
+    padding: 15px 20px;
+}
+
+
+#newsNotice li a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+#newsNotice li span {
+    font-size: 14px;
+    color: #7d7d7d;
+}
+
+/* 푸터 */
+
+#footerWrap {
+    border: 1px solid #ccc;
+    background: url(../img/logo2.png) no-repeat 50px center;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+#footer .info {
+    margin-left: 150px;
+}
+
+#footer .sns {
+    display: flex;
+}
+
+#footer .sns li {
+    width: 33px; margin-left: 17px;
+}
+
+#footer .sns li a {
+    display: block;
+    height: 33px;
+    background: url(../img/logo3.png) no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+#footer .sns .twitter a {background-position: right;}
