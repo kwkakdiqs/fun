@@ -151,7 +151,7 @@ body {
     height: 700px;
     text-align: center;
     margin-top: 100px;
-    background: url(/fun/marrakech-4500910_1920.jpg) no-repeat center / cover;
+    background: url(/fun/img/marrakech-4500910_1920.jpg) no-repeat center / cover;
 }
 
 #slogan::before {
@@ -203,7 +203,7 @@ body {
 #solution .solution {
     width: 100%;
     padding: 150px 20px 30px;
-    background: url(/fun/bg_solution.png) no-repeat;
+    background: url(/fun/img/bg_solution.png) no-repeat;
 }
 
 #solution .solution a {
@@ -323,7 +323,7 @@ body {
 
 #footerWrap {
     border: 1px solid #ccc;
-    background: url(/fun/logo2.png) no-repeat 50px center;
+    background: url(/fun/img/logo2.png) no-repeat 50px center;
 }
 
 #footer {
@@ -347,7 +347,7 @@ body {
 #footer .sns li a {
     display: block;
     height: 33px;
-    background: url(/fun/logo3.png) no-repeat;
+    background: url(/fun/img/logo3.png) no-repeat;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
